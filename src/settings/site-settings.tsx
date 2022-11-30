@@ -6,23 +6,23 @@ import { DEFlag } from '@components/icons/language/DEFlag';
 import { ESFlag } from '@components/icons/language/ESFlag';
 
 export const siteSettings = {
-  name: 'BoroBazar',
+  name: 'Rudi Shule',
   description:
-    'Fastest E-commerce template built with React, NextJS, TypeScript, React-Query and Tailwind CSS.',
+    'Online Store for all your child's Scholastic Materials Requirements',
   author: {
-    name: 'RedQ, Inc.',
-    websiteUrl: 'https://redq.io',
+    name: 'Rudi Shule.',
+    websiteUrl: 'https://rudishule.com',
     address: '',
   },
   logo: {
-    url: '/assets/images/logo.svg',
-    alt: 'BoroBazar',
+    url: 'https://rsbase.fanitehub.com/api/logo.svg',
+    alt: 'RudiShule',
     href: '/',
     width: 128,
     height: 30,
   },
   defaultLanguage: 'en',
-  currencyCode: 'USD',
+  currencyCode: 'UGX',
   site_header: {
     menu: [
       {
