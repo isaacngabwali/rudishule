@@ -8,7 +8,7 @@ import { ESFlag } from '@components/icons/language/ESFlag';
 export const siteSettings = {
   name: 'Rudi Shule',
   description:
-    'Online Store for all your child's Scholastic Materials Requirements',
+    'Online Store for all your Scholastic Materials Requirements',
   author: {
     name: 'Rudi Shule.',
     websiteUrl: 'https://rudishule.com',
