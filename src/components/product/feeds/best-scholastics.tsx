@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { useBestSellerGroceryProductsQuery } from '@framework/product/get-all-best-seller-grocery-products';
+import { useBestScholasticProductsQuery } from '@framework/product/get-all-best-scholastic-products';
 import ProductsGridBlock from '../products-grid-block';
 import { LIMITS } from '@framework/utils/limits';
 
@@ -8,11 +8,11 @@ interface ProductFeedProps {
   variant?: string;
 }
 
-const BestSellerGroceryProductFeed: FC<ProductFeedProps> = ({
+const BestSellerScholasticFeed: FC<ProductFeedProps> = ({
   className,
   variant,
 }) => {
-  const { data, isLoading, error } = useBestSellerGroceryProductsQuery({
+  const { data, isLoading, error } = useBestScholasticProductsQuery({
     limit: LIMITS.BEST_SELLER_GROCERY_PRODUCTS_LIMITS,
   });
   return (
@@ -28,4 +28,4 @@ const BestSellerGroceryProductFeed: FC<ProductFeedProps> = ({
     />
   );
 };
-export default BestSellerGroceryProductFeed;
+export default BestSellerScholasticFeed;

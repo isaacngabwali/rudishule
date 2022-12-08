@@ -4,19 +4,19 @@ import { API_ENDPOINTS } from '@framework/utils/api-endpoints';
 import { useQuery } from 'react-query';
 import axios from "axios";
 
-export const fetchBestSellerGroceryProducts = async ({ queryKey }: any) => {
+export const fetchBestScholasticProducts = async ({ queryKey }: any) => {
   const api = axios.create({
-    baseURL: 'http://localhost/rsbase/v1',
+    baseURL: 'http://rsbase.fanitehub.com/api/v1',
   });
   const [_key, _params] = queryKey;
   const { data } = await api.get("products");
   return data as Product[];
 };
-export const useBestSellerGroceryProductsQuery = (
+export const useBestScholasticProductsQuery = (
   options: QueryOptionsType
 ) => {
   return useQuery<Product[], Error>(
     [API_ENDPOINTS.BEST_SELLER_GROCERY_PRODUCTS, options],
-    fetchBestSellerGroceryProducts
+    fetchBestScholasticProducts
   );
 };

@@ -47,7 +47,7 @@ export const bannersGridHero = [
         height: 465,
       },
       desktop: {
-        url: '/assets/images/banner/banner-10.png',
+        url: 'https://i.ibb.co/5xK7nPV/banner-10.webp',
         width: 1190,
         height: 500,
       },
@@ -60,12 +60,12 @@ export const bannersGridHero = [
     type: 'small',
     image: {
       mobile: {
-        url: '/assets/images/banner/banner-mobile-11.png',
+        url: 'https://i.ibb.co/m0VKM59/banner-11.webp',
         width: 450,
         height: 465,
       },
       desktop: {
-        url: '/assets/images/banner/banner-11.png',
+        url: 'https://i.ibb.co/m0VKM59/banner-11.webp',
         width: 740,
         height: 500,
       },
