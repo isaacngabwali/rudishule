@@ -6,17 +6,17 @@ import { DEFlag } from '@components/icons/language/DEFlag';
 import { ESFlag } from '@components/icons/language/ESFlag';
 
 export const siteSettings = {
-  name: 'BoroBazar',
+  name: 'RudiShule',
   description:
-    'Fastest E-commerce template built with React, NextJS, TypeScript, React-Query and Tailwind CSS.',
+    'School Shopping at ypur fingertips',
   author: {
-    name: 'RedQ, Inc.',
-    websiteUrl: 'https://redq.io',
+    name: 'RudiShule.',
+    websiteUrl: 'https://rudushule.com',
     address: '',
   },
   logo: {
     url: '/assets/images/logo.svg',
-    alt: 'BoroBazar',
+    alt: 'Rudishule',
     href: '/',
     width: 128,
     height: 30,
