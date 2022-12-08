@@ -23,6 +23,7 @@ const BestSellerGroceryProductFeed: FC<ProductFeedProps> = ({
       products={data}
       loading={isLoading}
       error={error?.message}
+      limit={LIMITS.BEST_SELLER_GROCERY_PRODUCTS_LIMITS}
       uniqueKey="best-sellers"
       variant={variant}
     />
