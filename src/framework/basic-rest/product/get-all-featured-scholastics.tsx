@@ -6,7 +6,6 @@ import axios from 'axios';
 export const fetchPopularProducts = async ({ queryKey }: any) => {
   const api = axios.create({
     baseURL: 'https://rsbase.fanitehub.com/api/v1',
-    headers: { "Access-Control-Allow-Origin": "https://rs.fanitehub.com/" },
   });
   const [_key, _params] = queryKey;
   const { data } = await api.get("products");
