@@ -1,17 +1,11 @@
-import Layout from '@components/layout/layout-two';
+import Layout from '@components/layout/layout-five';
 import Container from '@components/ui/container';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import DownloadApps from '@components/common/download-apps';
-import BundleGrid from '@components/bundle/bundle-grid';
+import DownloadAppsTwo from '@components/common/download-apps-two';
+import BundleGrid from '@components/bundle/bundle-grid-two';
 import CollectionGrid from '@components/common/collection-grid';
-import HeroBannerCard from '@components/hero/hero-banner-card';
 import BestSellerGroceryProductFeed from '@components/product/feeds/best-seller-grocery-product-feed';
-import PopularProductFeed from '@components/product/feeds/popular-product-feed';
-import CategoryGridBlock from '@components/common/category-grid-block';
-import { homeSixHeroBanner as heroBanner } from '@framework/static/banner';
-import { homeSixBanner as banner } from '@framework/static/banner';
-import BannerCard from '@components/cards/banner-card';
-import { bundleDataTwo as bundle } from '@framework/static/bundle';
+import { bundleDataThree as bundle } from '@framework/static/bundle';
 import { GetStaticProps } from 'next';
 import Seo from '@components/seo/seo';
 import { QueryClient } from 'react-query';
@@ -21,38 +15,46 @@ import { fetchCategories } from '@framework/category/get-all-categories';
 import { fetchBestSellerGroceryProducts } from '@framework/product/get-all-best-seller-grocery-products';
 import { fetchPopularProducts } from '@framework/product/get-all-popular-products';
 import { LIMITS } from '@framework/utils/limits';
+import BannerGridTwo from '@components/common/banner-grid-two';
+import BannerHeroGrid from '@components/common/banner-hero-grid';
+import { bannersGridHero as bannersHero } from '@framework/static/banner';
+import { elegantBannerGrid as banners } from '@framework/static/banner';
+import FeatureCarousel from '@components/common/featured-carousel';
+import PopularProductWithBestDeals from '@components/product/popular-product-with-best-deals';
 
 export default function Home() {
   return (
     <>
       <Seo
-        title="Grocery & Food Store React Template"
+        title="Elegant"
         description="Fastest E-commerce template built with React, NextJS, TypeScript, React-Query and Tailwind CSS."
-        path="/"
+        path="/elegant"
       />
-      <HeroBannerCard
-        banner={heroBanner}
-        className="hero-banner-six min-h-[400px] md:min-h-[460px] lg:min-h-[500px] xl:min-h-[650px] py-20 py:pt-24 mb-5 2xl:bg-center"
-      />
+
       <Container>
+        <BannerHeroGrid
+          data={bannersHero}
+          className="my-3 md:my-4 lg:mt-0 lg:mb-5 xl:mb-6"
+        />
+        <FeatureCarousel />
+        <BestSellerGroceryProductFeed className="mb-12 lg:mb-14 xl:mb-16 2xl:mb-20" />
         <BundleGrid
           className="mb-12 lg:mb-14 xl:mb-16 2xl:mb-20"
           data={bundle}
         />
-        <CategoryGridBlock />
-        <BestSellerGroceryProductFeed variant="alpine" />
-        <BannerCard
-          banner={banner}
-          className="mb-12 lg:mb-14 xl:pb-3"
-          effectActive={false}
+        <PopularProductWithBestDeals />
+        <BannerGridTwo
+          data={banners}
+          className="mb-12 lg:mb-14 xl:mb-16 2xl:mb-20"
+          girdClassName="xl:gap-5 3xl:gap-7"
         />
-        <PopularProductFeed variant="alpine" />
       </Container>
+
       <CollectionGrid
         headingPosition="center"
-        className="pb-1 mb-12 xl:pt-2 2xl:pt-4 3xl:pt-6 lg:pb-0 lg:mb-14 xl:mb-16 2xl:mb-20"
+        className="pb-1 lg:pb-0 mb-12 lg:mb-14 xl:mb-16 2xl:mb-20"
       />
-      <DownloadApps />
+      <DownloadAppsTwo />
     </>
   );
 }
@@ -74,7 +76,10 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     fetchBestSellerGroceryProducts
   );
   await queryClient.prefetchQuery(
-    [API_ENDPOINTS.POPULAR_PRODUCTS, { limit: LIMITS.POPULAR_PRODUCTS_LIMITS }],
+    [
+      API_ENDPOINTS.POPULAR_PRODUCTS,
+      { limit: LIMITS.POPULAR_PRODUCTS_TWO_LIMITS },
+    ],
     fetchPopularProducts
   );
 
