@@ -10,6 +10,9 @@ const withPWA = require('next-pwa')({
 });
 
 module.exports = withPWA({
+  images: {
+    domains: ['www.mlbliving.com']
+  },
   reactStrictMode: true,
   i18n,
   ...(process.env.NODE_ENV === 'production' && {
