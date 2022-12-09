@@ -11,7 +11,7 @@ const withPWA = require('next-pwa')({
 
 module.exports = withPWA({
   images: {
-    domains: ['www.mlbliving.com', 'images.unsplash.com', 'upload.wikimedia.org']
+    domains: ['www.mlbliving.com', 'images.unsplash.com', 'upload.wikimedia.org', '141.145.197.97']
   },
   reactStrictMode: true,
   i18n,
