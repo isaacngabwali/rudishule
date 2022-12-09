@@ -84,7 +84,7 @@ const ProductCardAlpine: React.FC<ProductProps> = ({ product, className }) => {
       <div className="relative shrink-0">
         <div className="flex overflow-hidden max-w-[230px] mx-auto transition duration-200 ease-in-out transform group-hover:scale-105 relative">
           <Image
-            src={image?.thumbnail ?? image_original}
+            src={image_original}
             alt={name || 'Product Image'}
             width={230}
             height={200}
