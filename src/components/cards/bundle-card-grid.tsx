@@ -34,7 +34,7 @@ const BundleCardGrid: React.FC<Props> = ({
       <div className="relative flex items-center w-full overflow-hidden">
         <div className="relative flex max-w-full shrink-0">
           <Image
-            src={image ?? '/assets/placeholder/collection.svg'}
+            src='https://141.145.197.97:7800/down/AQ4KWI4Fgx91'
             alt={t(title) || t('text-card-thumbnail')}
             width={imgWidth}
             height={imgHeight}
