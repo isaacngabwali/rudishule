@@ -150,7 +150,7 @@ export const siteSettings = {
         id: 'en',
         name: 'English - EN',
         value: 'en',
-        icon: <UGflag />,
+        icon: <USFlag />,
       },
       {
         id: 'de',
