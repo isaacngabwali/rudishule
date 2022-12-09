@@ -60,6 +60,7 @@ const ProductCardAlpine: React.FC<ProductProps> = ({ product, className }) => {
     baseAmount: product?.price,
     currencyCode: 'USD',
   });
+  console.log("image url", image_original);
   const { price: minPrice } = usePrice({
     amount: product?.min_price ?? 0,
     currencyCode: 'USD',
