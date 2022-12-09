@@ -58,33 +58,6 @@ export const siteSettings = {
         ],
       },
       {
-        id: 3,
-        path: '/search',
-        label: 'menu-dietary',
-        subMenu: [
-          {
-            id: 1,
-            path: '/search',
-            label: 'menu-vegetarian',
-          },
-          {
-            id: 2,
-            path: '/search',
-            label: 'menu-kakogenic',
-          },
-          {
-            id: 3,
-            path: '/search',
-            label: 'menu-mediterranean',
-          },
-          {
-            id: 4,
-            path: '/search',
-            label: 'menu-organic',
-          },
-        ],
-      },
-      {
         id: 4,
         path: '/search/',
         label: 'menu-search',
@@ -92,7 +65,7 @@ export const siteSettings = {
       {
         id: 5,
         path: '/shops/',
-        label: 'menu-shops',
+        label: 'Schools',
       },
       {
         id: 6,
