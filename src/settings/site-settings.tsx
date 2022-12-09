@@ -5,10 +5,11 @@ import { USFlag } from '@components/icons/language/USFlag';
 import { DEFlag } from '@components/icons/language/DEFlag';
 import { ESFlag } from '@components/icons/language/ESFlag';
 
+const UGflag = 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Flag_of_Uganda.svg/80px-Flag_of_Uganda.svg.png';
 export const siteSettings = {
   name: 'RudiShule',
   description:
-    'School Shopping at your fingertips',
+    'School Shopping at ypur fingertips',
   author: {
     name: 'RudiShule.',
     websiteUrl: 'https://rudushule.com',
@@ -22,7 +23,7 @@ export const siteSettings = {
     height: 30,
   },
   defaultLanguage: 'en',
-  currencyCode: 'Ugx',
+  currencyCode: 'USD',
   site_header: {
     menu: [
       {
@@ -133,12 +134,41 @@ export const siteSettings = {
       },
     ],
     languageMenu: [
-      
+      {
+        id: 'ar',
+        name: 'عربى - AR',
+        value: 'ar',
+        icon: <SAFlag />,
+      },
+      {
+        id: 'zh',
+        name: '中国人 - ZH',
+        value: 'zh',
+        icon: <CNFlag />,
+      },
       {
         id: 'en',
         name: 'English - EN',
         value: 'en',
-        icon: <USFlag />,
+        icon: <UGFlag />,
+      },
+      {
+        id: 'de',
+        name: 'Deutsch - DE',
+        value: 'de',
+        icon: <DEFlag />,
+      },
+      {
+        id: 'he',
+        name: 'rעברית - HE',
+        value: 'he',
+        icon: <ILFlag />,
+      },
+      {
+        id: 'es',
+        name: 'Español - ES',
+        value: 'es',
+        icon: <ESFlag />,
       },
     ],
     pagesMenu: [
