@@ -3,8 +3,9 @@ import { useTranslation } from 'next-i18next';
 
 const ErrorInformation: React.FC = () => {
   const { t } = useTranslation('common');
-  const backgroundThumbnail = 'https://images.unsplash.com/photo-1527656855834-0235e41779fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60';
-  const errorThumbnail = 'https://images.unsplash.com/photo-1527656855834-0235e41779fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60';
+  const backgroundThumbnail = 'https://images.unsplash.com/photo-1551125735-900f662aeb07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80';
+  const errorThumbnail = '/assets/images/404.png';
+
   return (
     <div
       className="text-center px-12 py-16 sm:py-20 lg:py-24 xl:py-32 flex items-center justify-center bg-cover bg-no-repeat bg-center"
