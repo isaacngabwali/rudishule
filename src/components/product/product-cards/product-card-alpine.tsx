@@ -52,10 +52,10 @@ function RenderPopupOrAddToCart({ props }: { props: Object }) {
   return <AddToCart data={data} variant="mercury" />;
 }
 const ProductCardAlpine: React.FC<ProductProps> = ({ product, className }) => {
-  const { name, image, unit, product_type, image_original } = product ?? {};
+  const { price, name, image, unit, product_type, image_original } = product ?? {};
   const { openModal } = useModalAction();
   const { t } = useTranslation('common');
-  const { price, basePrice, discount } = usePrice({
+  const { basePrice, discount } = usePrice({
     amount: product?.sale_price ? product?.sale_price : product?.price,
     baseAmount: product?.price,
     currencyCode: 'USD',
