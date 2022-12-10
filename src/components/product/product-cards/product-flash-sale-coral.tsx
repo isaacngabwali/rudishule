@@ -78,7 +78,7 @@ const ProductFlashSaleCoral: React.FC<ProductProps> = ({
         <div className="relative shrink-0">
           <div className="relative flex justify-center mx-auto overflow-hidden">
             <img
-              src={image?.original ?? productPlaceholder}
+              src={image}
               alt={name || 'Product Image'}
               width={350}
               height={350}
