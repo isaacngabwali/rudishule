@@ -5,37 +5,9 @@ import useWindowSize from '@utils/use-window-size';
 import Carousel from '@components/ui/carousel/carousel';
 import { SwiperSlide } from '@components/ui/carousel/slider';
 import { ROUTES } from '@utils/routes';
-
-const data = [
-  {
-  id: 1,
-  slug: 'spensa',
-  image: 'https://141.145.197.97:7800/down/Rmm7GHzTt7f2',
-  title: 'St. Peters Senior Secondary School',
-  description:' Shop all the School Scholastic Material for here',
-},
-{
-  id: 2,
-  slug: 'kitante-hillschool',
-  image: 'https://141.145.197.97:7800/down/SJ4H9tprGhBq',
-  title: 'kitante hill school',
-  description: 'Shop all the School Scholastic Material for here',
-},
-{
-  id: 3,
-  slug: 'mengo-ss',
-  image: 'https://141.145.197.97:7800/down/37FCHqqiqaXt',
-  title: 'Mengo Senior Secondary School',
-  description: 'Shop all the School Scholastic Material for here',
-},
-{
-  id: 4,
-  slug: 'bishops',
-  image: 'https://141.145.197.97:7800/down/Z6twlaS3zp1X',
-  title: 'Bishops Senior Secondary School Mukono',
-  description: 'Shop all the School Scholastic Material for here',
-}
-];
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { SchoolSlides } from '@framework/types';
 
 interface Props {
   className?: string;
@@ -62,6 +34,13 @@ const CollectionGrid: React.FC<Props> = ({
   headingPosition = 'left',
 }) => {
   const { width } = useWindowSize();
+  const [slideresponse, setSlideresponse] = useState<SchoolSlides[] | null>();
+  useEffect(() => {
+    const url = 'https://rsbase.fanitehub.com/api/v1/schoolslides';
+    axios.get(url).then((response) => {
+      setSlideresponse(response.data);
+    });
+  }, []);
   return (
     <div className={className}>
       <Container>
@@ -80,7 +59,7 @@ const CollectionGrid: React.FC<Props> = ({
             prevActivateId="collection-carousel-button-prev"
             nextActivateId="collection-carousel-button-next"
           >
-            {data?.map((item) => (
+            {slideresponse?.map((item) => (
               <SwiperSlide
                 key={`collection-key-${item.id}`}
                 className="px-1.5 md:px-2 xl:px-2.5 py-4"
