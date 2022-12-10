@@ -8,33 +8,33 @@ import { ROUTES } from '@utils/routes';
 
 const data = [
   {
-    id: 1,
-    slug: 'feel-the-thirsty-in-summer-anytime',
-    image: '/assets/images/collection/1.png',
-    title: 'collection-title-one',
-    description: 'collection-description-one',
-  },
-  {
-    id: 2,
-    slug: 'most-popular-item-for-Fast-food',
-    image: '/assets/images/collection/2.png',
-    title: 'collection-title-two',
-    description: 'collection-description-two',
-  },
-  {
-    id: 3,
-    slug: 'authentic-japanese-food-in-real-taste',
-    image: '/assets/images/collection/3.png',
-    title: 'collection-title-three',
-    description: 'collection-description-three',
-  },
-  {
-    id: 4,
-    slug: 'explore-our-family-of-freshest®-foods',
-    image: '/assets/images/collection/4.png',
-    title: 'collection-title-four',
-    description: 'collection-description-four',
-  },
+  id: 1,
+  slug: 'spensa',
+  image: 'https://141.145.197.97:7800/down/Rmm7GHzTt7f2',
+  title: 'St. Peters Senior Secondary School',
+  description:' Shop all the School Scholastic Material for here',
+},
+{
+  id: 2,
+  slug: 'kitante-hillschool',
+  image: 'https://141.145.197.97:7800/down/SJ4H9tprGhBq',
+  title: 'kitante hill school',
+  description: 'Shop all the School Scholastic Material for here',
+},
+{
+  id: 3,
+  slug: 'mengo-ss',
+  image: 'https://141.145.197.97:7800/down/37FCHqqiqaXt',
+  title: 'Mengo Senior Secondary School',
+  description: 'Shop all the School Scholastic Material for here',
+},
+{
+  id: 4,
+  slug: 'bishops',
+  image: 'https://141.145.197.97:7800/down/Z6twlaS3zp1X',
+  title: 'Bishops Senior Secondary School Mukono',
+  description: 'Shop all the School Scholastic Material for here',
+}
 ];
 
 interface Props {
