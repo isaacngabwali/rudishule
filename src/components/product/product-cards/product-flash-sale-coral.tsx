@@ -45,10 +45,10 @@ const ProductFlashSaleCoral: React.FC<ProductProps> = ({
   className,
   date,
 }) => {
-  const { name, image, quantity, sold, product_type } = product ?? {};
+  const { price, name, image, quantity, sold, product_type } = product ?? {};
   const { openModal } = useModalAction();
   const { t } = useTranslation('common');
-  const { price, basePrice } = usePrice({
+  const { basePrice } = usePrice({
     amount: product?.sale_price ? product?.sale_price : product?.price,
     baseAmount: product?.price,
     currencyCode: 'USD',
@@ -77,7 +77,7 @@ const ProductFlashSaleCoral: React.FC<ProductProps> = ({
       <div className="">
         <div className="relative shrink-0">
           <div className="relative flex justify-center mx-auto overflow-hidden">
-            <Image
+            <img
               src={image?.original ?? productPlaceholder}
               alt={name || 'Product Image'}
               width={350}
@@ -96,9 +96,7 @@ const ProductFlashSaleCoral: React.FC<ProductProps> = ({
         <div className="flex flex-col pb-5 lg:pb-6 mb-0.5 lg:pt-3 h-full text-center">
           <div className="-mx-1 mb-1 lg:mb-2.5">
             <span className="inline-block mx-1 text-xl font-semibold xl:text-2xl text-brand-dark">
-              {product_type === 'variable'
-                ? `${minPrice} - ${maxPrice}`
-                : price}
+              {price}/= Ugx
             </span>
             {basePrice && (
               <del className="mx-1 text-base text-opacity-50 xl:text-lg text-brand-dark">
