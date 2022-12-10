@@ -42,12 +42,12 @@ export const bannersGridHero = [
     type: 'medium',
     image: {
       mobile: {
-        url: '/assets/images/banner/banner-mobile-10.png',
+        url: 'https://hub.fanitehub.com/banner-mobile-10.png',
         width: 450,
         height: 465,
       },
       desktop: {
-        url: '/assets/images/banner/banner-10.png',
+        url: 'https://hub.fanitehub.com/banner-10.png',
         width: 1190,
         height: 500,
       },
@@ -60,12 +60,12 @@ export const bannersGridHero = [
     type: 'small',
     image: {
       mobile: {
-        url: '/assets/images/banner/banner-mobile-11.png',
+        url: 'https://hub.fanitehub.com/banner-mobile-11.png',
         width: 450,
         height: 465,
       },
       desktop: {
-        url: '/assets/images/banner/banner-11.png',
+        url: 'https://hub.fanitehub.com/banner-11.png',
         width: 740,
         height: 500,
       },
