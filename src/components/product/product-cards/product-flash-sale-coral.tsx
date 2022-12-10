@@ -45,7 +45,7 @@ const ProductFlashSaleCoral: React.FC<ProductProps> = ({
   className,
   date,
 }) => {
-  const { price, name, image, quantity, sold, product_type } = product ?? {};
+  const { price, name, image_original, quantity, sold, product_type } = product ?? {};
   const { openModal } = useModalAction();
   const { t } = useTranslation('common');
   const { basePrice } = usePrice({
@@ -78,7 +78,7 @@ const ProductFlashSaleCoral: React.FC<ProductProps> = ({
         <div className="relative shrink-0">
           <div className="relative flex justify-center mx-auto overflow-hidden">
             <img
-              src={image}
+              src={image_original}
               alt={name || 'Product Image'}
               width={350}
               height={350}
