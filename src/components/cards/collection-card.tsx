@@ -30,8 +30,8 @@ const CollectionCard: React.FC<Props> = ({
       href={href}
       className="flex flex-col overflow-hidden rounded-md group shadow-card "
     >
-      <Image
-        src={image ?? collectionPlaceholder}
+      <img
+        src={image}
         alt={t(title) || t('text-card-thumbnail')}
         width={imgWidth}
         height={imgHeight}
