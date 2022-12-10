@@ -143,3 +143,10 @@ export type Shop = {
   created_at: string;
   updated_at: string;
 };
+export type SchoolSlides = {
+  id: string | number;
+  slug: string;
+  image: string;
+  title: string;
+  description: string;
+};
